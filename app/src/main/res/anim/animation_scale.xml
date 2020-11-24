@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+
+    <!--android:fillAfter="true" 设置动画结束后是否停留在最后一帧，实际上View的位置和大小不变-->
+
+    <!-- fromXScale toXScale fromYScale toYScale  起始和最终的缩放倍数
+    android:pivotX 表示缩放起点 X 轴坐标，可以是整数值、百分数（或者小数）、百分数p 三种样式，
+    比如 50、50%、50%p。
+    需要明确的是，这里以进行动画控件的左上角为原点坐标，当属性值为数值，如 50 时，表示原点坐标加上 50px，作为起始点；
+    如果是百分数，比如 50%，表示原点坐标加上自己宽度的 50%（即控件水平中心）作为起始点 ；
+    如果是 50%p（字母 p 是 parent 的意思），取值的基数是父控件，因此 50%p 就是表示在原点坐标加上父控件宽度的 50% 作为起始点 x 轴坐标。
+    -->
+    <scale
+        android:fromXScale="0"
+        android:toXScale="2"
+        android:fromYScale="0"
+        android:toYScale="2"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:duration="1000"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"/>
+</set>

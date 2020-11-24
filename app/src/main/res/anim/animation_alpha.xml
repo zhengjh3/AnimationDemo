@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+
+    <!--android:fillAfter="true" 设置动画结束后是否停留在最后一帧，实际上View的位置和大小不变-->
+
+    <!-- fromAlpha 起始透明度 toAlpha 最终透明度  范围0 ~ 1
+    -->
+    <alpha
+        android:fromAlpha="0"
+        android:toAlpha="1"
+        android:duration="2000"
+        android:interpolator="@android:anim/linear_interpolator"/>
+</set>

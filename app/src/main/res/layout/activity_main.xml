@@ -11,11 +11,20 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
+	
+	  <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View动画"
+            android:textAllCaps="false"
+            android:onClick="showViewAnimation"
+            />
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:text="LayoutAnimation"
+            android:textAllCaps="false"
             android:onClick="showLayoutAnimation"/>
 
     </LinearLayout>

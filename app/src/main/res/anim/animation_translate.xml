@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--android:fillAfter="true" 设置动画结束后是否停留在最后一帧，实际上View的位置和大小不变-->
+
+    <!-- fromXDelta toXDelta fromYDelta toYDelta 参数可设置为数值、百分数、百分数p，
+    譬如50表示以当前View左上角坐标加50px为初始点、
+    50%表示以当前View的左上角加上当前View宽高的50%做为初始点、
+    50%p表示以当前View的左上角加上父控件宽高的50%做为初始点
+    android:interpolator 指定动画插值器
+    -->
+    <translate
+        android:fromXDelta="0"
+        android:toXDelta="60%p"
+        android:fromYDelta="0"
+        android:toYDelta="50%p"
+        android:duration="1000"
+        android:interpolator="@android:anim/linear_interpolator"/>
+</set>
