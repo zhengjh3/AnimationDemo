@@ -23,13 +23,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, ViewAnimationActivity.class));
     }
 
-
-    public void showLayoutAnimation(View view) {
-        startActivity(new Intent(this, LayoutAnimationActivity.class));
-    }
-
-    public void showCustomizedAnimation(View view){
-        startActivity(new Intent(this, CustomizedAnimationActivity.class));
-    }
-	
 }

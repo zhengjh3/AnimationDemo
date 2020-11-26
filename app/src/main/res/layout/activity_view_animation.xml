@@ -18,62 +18,31 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TranslateAnimation平移动画"
+            android:text="补间动画"
             android:textAllCaps="false"
-            android:onClick="translateAnimation"
-            />
+            android:onClick="showTweenAnimation"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ScaleAnimation缩放动画"
+            android:text="自定义动画"
             android:textAllCaps="false"
-            android:onClick="scaleAnimation"
-            />
+            android:onClick="showCustomizedAnimation"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RotateAnimation旋转动画"
+            android:text="逐帧动画"
             android:textAllCaps="false"
-            android:onClick="rotateAnimation"
-            />
+            android:onClick="showFrameAnimation"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="AlphaAnimation透明动画"
+            android:text="LayoutAnimation"
             android:textAllCaps="false"
-            android:onClick="alphaAnimation"
-            />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="组合动画(同时)"
-            android:textAllCaps="false"
-            android:onClick="playAnimationSet"
-            />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="动画轮播"
-            android:textAllCaps="false"
-            android:onClick="playAnimationList"
-            />
+            android:onClick="showLayoutAnimation"/>
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/iv_rect"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:visibility="visible"
-        android:background="@drawable/shape_rectangle"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ll_animation_items"
-        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
