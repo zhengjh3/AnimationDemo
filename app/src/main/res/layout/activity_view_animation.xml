@@ -50,12 +50,18 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="组合动画"
+            android:text="组合动画(同时)"
             android:textAllCaps="false"
-            android:onClick="playSetAnimation"
+            android:onClick="playAnimationSet"
             />
 
-
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="动画轮播"
+            android:textAllCaps="false"
+            android:onClick="playAnimationList"
+            />
 
     </LinearLayout>
 

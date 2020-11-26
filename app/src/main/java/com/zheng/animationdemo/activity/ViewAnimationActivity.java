@@ -19,9 +19,14 @@ import android.widget.Toast;
 
 import com.zheng.animationdemo.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ViewAnimationActivity extends AppCompatActivity {
 
     private ImageView ivRect;
+
+    private List<Animation> listAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +39,7 @@ public class ViewAnimationActivity extends AppCompatActivity {
                 Toast.makeText(ViewAnimationActivity.this, "点击方块",Toast.LENGTH_SHORT).show();
             }
         });
+        listAnimation = new ArrayList<>();
     }
 
     /**
@@ -123,9 +129,9 @@ public class ViewAnimationActivity extends AppCompatActivity {
     }
 
     /**
-     * 展示组合动画
+     * 多个动画同时播放
      * */
-    public void playSetAnimation(View view){
+    public void playAnimationSet(View view){
         //加载动画xml方式
         /*Animation animSet = AnimationUtils.loadAnimation(this, R.anim.animation_set);
         ivRect.startAnimation(animSet);*/
@@ -150,6 +156,64 @@ public class ViewAnimationActivity extends AppCompatActivity {
         animationSet.addAnimation(alphaAnim);
         //开始动画
         ivRect.startAnimation(animationSet);
+
+    }
+
+    /**
+     * 多个动画轮流播放
+     * */
+    public void playAnimationList(View view){
+        listAnimation.clear();
+        TranslateAnimation translateAnim = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0, Animation.ABSOLUTE, 30,Animation.RELATIVE_TO_SELF, 0,Animation.ABSOLUTE, 30);
+        translateAnim.setDuration(1000);
+        translateAnim.setFillAfter(true);
+        final ScaleAnimation scaleAnim = new ScaleAnimation(0, 2, 0, 2,Animation.RELATIVE_TO_SELF, 0.5f,Animation.RELATIVE_TO_SELF, 0.5f);
+        scaleAnim.setDuration(1000);
+        scaleAnim.setFillAfter(true);
+        final RotateAnimation rotateAnim = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF, 0.5f,Animation.RELATIVE_TO_SELF, 0.5f);
+        rotateAnim.setDuration(1000);
+        rotateAnim.setFillAfter(true);
+        final AlphaAnimation alphaAnim = new AlphaAnimation(1f,0);
+        alphaAnim.setDuration(1000);
+        alphaAnim.setFillAfter(true);
+        listAnimation.add(translateAnim);
+        listAnimation.add(scaleAnim);
+        listAnimation.add(rotateAnim);
+        listAnimation.add(alphaAnim);
+        //开始动画
+        startAnimationList(listAnimation, 0);
+    }
+
+    //播放动画list
+    private void startAnimationList(final List<Animation> listAnim, final int index) {
+        if(listAnim != null && index < listAnim.size() - 1) {
+            for(int i = 0; i < listAnim.size() - 1; i ++) {
+                final Animation nextAnim = listAnim.get(i + 1);
+                listAnim.get(i).setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        //结束后播放下一个动画
+                        if(ivRect != null) {
+                            ivRect.startAnimation(nextAnim);
+                        }
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
+            }
+        }
+
+        if(ivRect != null) {
+            ivRect.startAnimation(listAnimation.get(index));
+        }
 
     }
 
