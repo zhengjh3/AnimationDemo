@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.zheng.animationdemo.activity.CustomizedAnimationActivity;
 import com.zheng.animationdemo.activity.LayoutAnimationActivity;
 import com.zheng.animationdemo.activity.ViewAnimationActivity;
 
@@ -18,13 +19,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 	
-	 public void showViewAnimation(View view){
+    public void showViewAnimation(View view){
         startActivity(new Intent(this, ViewAnimationActivity.class));
     }
 
 
     public void showLayoutAnimation(View view) {
         startActivity(new Intent(this, LayoutAnimationActivity.class));
+    }
+
+    public void showCustomizedAnimation(View view){
+        startActivity(new Intent(this, CustomizedAnimationActivity.class));
     }
 	
 }

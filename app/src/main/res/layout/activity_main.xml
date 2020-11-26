@@ -23,6 +23,13 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="自定义动画"
+            android:textAllCaps="false"
+            android:onClick="showCustomizedAnimation"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="LayoutAnimation"
             android:textAllCaps="false"
             android:onClick="showLayoutAnimation"/>
