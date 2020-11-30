@@ -33,4 +33,8 @@ public class ViewAnimationActivity extends AppCompatActivity {
         startActivity(new Intent(this, LayoutAnimationActivity.class));
     }
 
+    public void showSwitchAnimation(View view) {
+        startActivity(new Intent(this, SwitchAnimationActivity.class));
+    }
+
 }
