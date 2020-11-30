@@ -3,9 +3,37 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/WindowAnimation</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/ActivityAnimation</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="WindowAnimation" parent="@android:style/Animation">
+        <!--窗体进入动画-->
+        <item name="android:windowEnterAnimation" >@anim/anim_in_from_bottom</item>
+        <!--窗体退出动画-->
+        <item name="android:windowExitAnimation" >@anim/anim_out_to_top</item>
+    </style>
+
+    <style name="ActivityAnimation" parent="@android:style/Animation.Activity">
+        <!--android:activityOpenEnterAnimation：A跳转到B时, B的进入动画。
+        android:activityOpenExitAnimation：A跳转到B时，A的退出动画，与B的动画是一起显示的。
+        android:activityCloseEnterAnimation：B跳转到C后，C后退到B时，B的进入动画
+        android:activityCloseExitAnimation：B跳转到C后，C后退到B时，C的退出动画
+        -->
+        <item name="android:activityOpenEnterAnimation">@anim/anim_in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_out_to_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_out_to_right</item>
     </style>
 
 </resources>

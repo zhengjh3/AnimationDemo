@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SwitchAnimationActivity" />
+        <activity android:name=".activity.SwitchAnimationActivity" android:theme="@style/AppTheme2"/>
         <activity android:name=".activity.TweenAnimationActivity" />
         <activity android:name=".activity.FrameAnimationActivity" />
         <activity android:name=".activity.CustomizedAnimationActivity" />
