@@ -36,6 +36,9 @@ public class ViewAnimationActivity extends AppCompatActivity {
 
     public void showSwitchAnimation(View view) {
         startActivity(new Intent(this, SwitchAnimationActivity.class));
+        //设置进入动画, A进入B，第一个参数为B的进入动画，对应style中的android:activityOpenEnterAnimation
+        // 第二个参数为A的退出动画，对应style中的android:activityOpenExitAnimation
+        overridePendingTransition(R.anim.anim_in_from_bottom, R.anim.anim_out_to_top);
     }
 
     public void showDialogAnimation(View view) {

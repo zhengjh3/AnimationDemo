@@ -29,6 +29,7 @@
         android:activityCloseEnterAnimation：B跳转到C后，C后退到B时，B的进入动画
         android:activityCloseExitAnimation：B跳转到C后，C后退到B时，C的退出动画
         -->
+        <!--如果在代码中动态设置了进入进出动画，则对应属性指定的动画效果失效-->
         <item name="android:activityOpenEnterAnimation">@anim/anim_in_from_right</item>
         <item name="android:activityOpenExitAnimation">@anim/anim_out_to_left</item>
         <item name="android:activityCloseEnterAnimation">@anim/anim_in_from_left</item>
