@@ -50,6 +50,13 @@
             android:textAllCaps="false"
             android:onClick="showSwitchAnimation"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义Dialog动画"
+            android:textAllCaps="false"
+            android:onClick="showDialogAnimation"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

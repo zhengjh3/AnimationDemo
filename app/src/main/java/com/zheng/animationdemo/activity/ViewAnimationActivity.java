@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.zheng.animationdemo.R;
+import com.zheng.animationdemo.dialog.AnimationDialog;
 
 
 public class ViewAnimationActivity extends AppCompatActivity {
@@ -37,4 +38,8 @@ public class ViewAnimationActivity extends AppCompatActivity {
         startActivity(new Intent(this, SwitchAnimationActivity.class));
     }
 
+    public void showDialogAnimation(View view) {
+        AnimationDialog dialog = new AnimationDialog(this);
+        dialog.show();
+    }
 }
