@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.zheng.animationdemo.activity.CustomizedAnimationActivity;
 import com.zheng.animationdemo.activity.LayoutAnimationActivity;
+import com.zheng.animationdemo.activity.PropertyAnimationActivity;
 import com.zheng.animationdemo.activity.ViewAnimationActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
 	
     public void showViewAnimation(View view){
         startActivity(new Intent(this, ViewAnimationActivity.class));
+    }
+
+    public void showPropertyAnimation(View view){
+        startActivity(new Intent(this, PropertyAnimationActivity.class));
     }
 
 }

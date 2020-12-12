@@ -12,15 +12,22 @@
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
 	
-	  <Button
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="View动画"
             android:textAllCaps="false"
             android:onClick="showViewAnimation"
             />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="属性动画"
+            android:textAllCaps="false"
+            android:onClick="showPropertyAnimation"
+            />
 
-    </LinearLayout>
+        </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
