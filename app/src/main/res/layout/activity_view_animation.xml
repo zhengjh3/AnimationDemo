@@ -18,6 +18,15 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="View动画分类↓"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_light"
+            android:background="@android:color/white"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="补间动画"
             android:textAllCaps="false"
             android:onClick="showTweenAnimation"/>
@@ -39,6 +48,15 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="View动画使用场景示例↓"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_light"
+            android:background="@android:color/white"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="LayoutAnimation"
             android:textAllCaps="false"
             android:onClick="showLayoutAnimation"/>
@@ -49,6 +67,13 @@
             android:text="Activity切换动画"
             android:textAllCaps="false"
             android:onClick="showSwitchAnimation"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义Dialog动画"
+            android:textAllCaps="false"
+            android:onClick="showDialogAnimation"/>
 
     </LinearLayout>
 
