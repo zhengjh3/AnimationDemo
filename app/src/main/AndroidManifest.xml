@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.PropertyAnimationActivity"></activity>
+        <activity android:name=".activity.ObjectAnimatorActivity"></activity>
+        <activity android:name=".activity.PropertyAnimationActivity" />
         <activity
             android:name=".activity.SwitchAnimationActivity"
             android:theme="@style/AppTheme2" />

@@ -1,6 +1,6 @@
 package com.zheng.animationdemo.bean;
 
-import android.widget.ImageView;
+import androidx.annotation.NonNull;
 
 /**
  * author: zhengjh
@@ -25,5 +25,14 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "Person {" +
+                "portraitId:" + portraitId +
+                ",name:" + name +
+                "}";
     }
 }
